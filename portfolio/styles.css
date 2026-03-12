@@ -691,3 +691,98 @@ body {
 @media (min-width: 769px) {
     .mobile-logo-wrapper { display: none; }
 }
+
+/* --- SKILLS SECTION --- */
+.skills-section {
+    padding-top: 60px;
+    margin-bottom: 80px;
+}
+
+.skills-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 24px;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.skill-category {
+    margin-bottom: 40px;
+}
+
+.category-title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 12px;
+}
+
+.skill-card {
+    background: #0d0d0d;
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 16px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.skill-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skill-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-years {
+    font-size: 12px;
+    color: #444;
+}
+
+.skill-name {
+    font-size: 15px;
+    color: #fff;
+    font-weight: 500;
+}
+
+/* Mobile Skills */
+
+/* Mobile Skills exact layout match */
+@media (max-width: 600px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 8px;
+    }
+    .skill-card {
+        padding: 12px;
+        border-radius: 12px;
+        min-height: 80px;
+    }
+    .skill-years {
+        font-size: 10px;
+    }
+    .skill-name {
+        font-size: 13px;
+        margin-top: 4px;
+    }
+    .skill-icon svg {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+}
