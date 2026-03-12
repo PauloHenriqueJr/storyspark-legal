@@ -392,3 +392,152 @@ body {
 @media (max-width: 640px) {
     .apps-grid { grid-template-columns: 1fr; }
 }
+
+/* --- EXACT HERO VISUALS --- */
+.hero-section {
+    padding-top: 100px;
+    padding-bottom: 40px;
+}
+
+.avatars-container {
+    display: flex;
+    position: relative;
+    height: 180px;
+    margin-bottom: 48px;
+    width: 100%;
+}
+
+.avatar-left {
+    width: 160px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 24px;
+    transform: rotate(-6deg);
+    border: 2px solid #1a1a1a;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    filter: brightness(0.8);
+}
+
+.avatar-right {
+    width: 170px;
+    height: 185px;
+    object-fit: cover;
+    border-radius: 24px;
+    transform: rotate(3deg);
+    border: 2px solid #1a1a1a;
+    position: absolute;
+    left: 110px;
+    z-index: 2;
+    box-shadow: -15px 0 35px rgba(0,0,0,0.7);
+}
+
+.title-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.hero-title {
+    font-size: 24px;
+    font-weight: 500;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.greeting {
+    color: #444; /* Darker "Sup!" */
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 32px;
+}
+
+.tag {
+    background: #121212;
+    padding: 6px 16px;
+    border-radius: 12px;
+    font-size: 14px;
+    color: #a1a1a1;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.bio {
+    font-size: 22px;
+    line-height: 1.4;
+    color: #444; /* Muted color for "I'm an", "and", etc. */
+}
+
+.bio .text-white {
+    color: #fff;
+    font-weight: 500;
+}
+
+.blog-preview {
+    margin: 40px 0;
+}
+
+.blog-label {
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 12px;
+}
+
+.blog-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 4px;
+    width: fit-content;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 40px;
+}
+
+.stat-card {
+    background: #0d0d0d;
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 24px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 140px;
+}
+
+.stat-card .label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #444;
+    font-size: 14px;
+}
+
+.stat-card .value {
+    font-size: 36px;
+    font-weight: 400;
+    color: #fff;
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+    .avatars-container { height: 160px; }
+    .avatar-left { width: 140px; height: 150px; }
+    .avatar-right { width: 150px; height: 165px; left: 90px; }
+    .bio { font-size: 18px; }
+}
