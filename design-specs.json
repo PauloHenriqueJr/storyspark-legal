@@ -1,0 +1,61 @@
+{
+    "designSystem": {
+        "colors": {
+            "background": "#0a0a0a",
+            "cardBackground": "#141414",
+            "textPrimary": "#ffffff",
+            "textSecondary": "#888888",
+            "border": "rgba(255, 255, 255, 0.1)",
+            "accent": "#ffffff"
+        },
+        "typography": {
+            "fontFamily": "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+            "h1": {
+                "fontSize": "2.5rem",
+                "fontWeight": "600",
+                "letterSpacing": "-0.02em"
+            },
+            "p": {
+                "fontSize": "1rem",
+                "lineHeight": "1.5"
+            }
+        },
+        "spacing": {
+            "containerPadding": "2rem",
+            "gap": "1.5rem",
+            "cardPadding": "2rem"
+        },
+        "borders": {
+            "radius": "24px",
+            "width": "1px",
+            "style": "solid"
+        }
+    },
+    "layoutStructure": {
+        "type": "css-grid",
+        "container": "max-width: 1200px; margin: 0 auto; padding: 2rem;",
+        "gridTemplate": "grid-template-columns: repeat(12, 1fr); auto-rows: minmax(auto, 200px); gap: 24px;",
+        "components": [
+            {
+                "name": "Hero Section (Bio/Intro)",
+                "span": "col-span-8 row-span-2",
+                "contentLayout": "flex-col justify-between"
+            },
+            {
+                "name": "Visual/Avatar Card",
+                "span": "col-span-4 row-span-2",
+                "contentLayout": "image-cover"
+            },
+            {
+                "name": "Experience/Info Card",
+                "span": "col-span-4 row-span-1",
+                "contentLayout": "flex-col center"
+            },
+            {
+                "name": "Project Portfolio Card",
+                "span": "col-span-8 row-span-2",
+                "contentLayout": "image-cover with text overlay"
+            }
+        ]
+    }
+}

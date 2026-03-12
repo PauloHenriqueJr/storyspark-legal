@@ -15,6 +15,24 @@ services:
       - "traefik.http.routers.storyspark-legal.tls.certresolver=mytlschallenge"
       - "traefik.http.services.storyspark-legal.loadbalancer.server.port=80"
 
+  elmineiro-portfolio:
+    build:
+      context: .
+      dockerfile: Dockerfile.portfolio
+    image: elmineiro-portfolio:latest
+    container_name: elmineiro-portfolio
+    restart: unless-stopped
+    networks:
+      - traefik
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=traefik"
+      - "traefik.http.routers.elmineiro-portfolio.rule=Host(`elmineiro.storyspark.com.br`)"
+      - "traefik.http.routers.elmineiro-portfolio.entrypoints=web,websecure"
+      - "traefik.http.routers.elmineiro-portfolio.tls=true"
+      - "traefik.http.routers.elmineiro-portfolio.tls.certresolver=mytlschallenge"
+      - "traefik.http.services.elmineiro-portfolio.loadbalancer.server.port=80"
+
 networks:
   traefik:
     external: true

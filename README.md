@@ -7,8 +7,9 @@ Microsite estático da StorySpark para página institucional leve e documentos l
 - `index.html`: home institucional com links para os apps
 - `legal/<app>/privacy/`: política de privacidade por app
 - `legal/<app>/data-deletion/`: instruções de exclusão de dados por app
+- `portfolio/`: site pessoal servido em subdomínio separado
 - `styles.css`: estilo compartilhado
-- `Dockerfile` e `docker-compose.yml`: publicação estática com Nginx atrás do Traefik
+- `Dockerfile`, `Dockerfile.portfolio` e `docker-compose.yml`: publicação estática com Nginx atrás do Traefik
 
 ## Apps atuais
 
@@ -39,3 +40,7 @@ docker compose up -d --build
 - `https://storyspark.com.br/legal/senda/data-deletion/`
 - `https://storyspark.com.br/legal/omniwell/privacy/`
 - `https://storyspark.com.br/legal/omniwell/data-deletion/`
+
+## URL planejada
+
+- `https://elmineiro.storyspark.com.br/`
