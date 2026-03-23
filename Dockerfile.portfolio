@@ -1,4 +1,0 @@
-FROM nginx:1.27-alpine
-
-COPY portfolio/nginx.conf /etc/nginx/conf.d/default.conf
-COPY portfolio/ /usr/share/nginx/html

@@ -17,8 +17,8 @@ services:
 
   elmineiro-portfolio:
     build:
-      context: .
-      dockerfile: Dockerfile.portfolio
+      context: ./portfolio
+      dockerfile: Dockerfile
     image: elmineiro-portfolio:latest
     container_name: elmineiro-portfolio
     restart: unless-stopped
