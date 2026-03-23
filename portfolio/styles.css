@@ -490,51 +490,94 @@ svg {
 .project-visual-apps {
   display: grid;
   place-items: center;
-  padding: 20px;
+  padding: 28px 20px;
 }
 
-.app-badge-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+.app-showcase {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-showcase-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 10px;
+  margin: 0;
 }
 
-.app-badge-grid img,
-.placeholder-badge {
-  width: 54px;
-  height: 54px;
-  border-radius: 16px;
+.app-showcase-item img {
+  width: 72px;
+  height: 72px;
+  border-radius: 18px;
   border: 1px solid rgba(0, 0, 0, 0.08);
   background: #fff;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: transform 200ms ease;
 }
 
-.placeholder-badge {
-  display: grid;
-  place-items: center;
-  color: #151515;
-  font-size: 0.9rem;
-  font-weight: 800;
+.app-showcase-item:hover img {
+  transform: scale(1.06);
 }
 
-.placeholder-badge.dark {
-  background: #121212;
-  color: #f4f4f0;
+.app-showcase-item figcaption {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #555;
+  letter-spacing: 0.01em;
 }
 
 .project-visual-web {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 8px;
-  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0;
+  padding: 16px 20px;
 }
 
-.project-visual-web img {
-  width: 100%;
-  height: 106px;
-  border-radius: 14px;
-  object-fit: cover;
-  border: 1px solid rgba(0, 0, 0, 0.08);
+.web-route-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.web-route-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  transition: background 160ms ease;
+}
+
+.web-route-item:hover {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.web-route-item svg {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  color: #888;
+}
+
+.web-route-item div {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.web-route-item strong {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.web-route-item span {
+  font-size: 0.76rem;
+  color: #999;
 }
 
 .project-body {
@@ -1420,10 +1463,6 @@ svg {
     min-height: 240px;
   }
 
-  .project-visual-web img {
-    height: 112px;
-  }
-
   .project-body,
   .catalog-body {
     padding: 18px 20px 20px;
@@ -1520,10 +1559,14 @@ svg {
     padding-inline: 8px;
   }
 
-  .app-badge-grid img,
-  .placeholder-badge {
-    width: 48px;
-    height: 48px;
+  .app-showcase-item img {
+    width: 58px;
+    height: 58px;
+    border-radius: 15px;
+  }
+
+  .app-showcase {
+    gap: 18px;
   }
 
   .contact-card,
