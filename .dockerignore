@@ -1,0 +1,12 @@
+*.py
+*.png
+*.md
+docker-compose.yml
+Dockerfile*
+.git
+.gitignore
+.superset
+.dockerignore
+design-specs.json
+firebase-debug.log
+portfolio/
