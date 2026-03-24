@@ -539,81 +539,37 @@ svg {
   letter-spacing: 0.02em;
 }
 
-/* ── Web & Legal visual ── */
+/* ── Web & Desktop visual ── */
 .project-visual-web {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-  background:
-    radial-gradient(ellipse at 70% 20%, rgba(83, 106, 145, 0.14) 0%, transparent 60%),
-    linear-gradient(160deg, rgba(18, 20, 26, 1) 0%, rgba(12, 13, 16, 1) 100%);
-  border-bottom: 1px solid var(--border);
-}
-
-.web-surface-stack {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  width: 100%;
-  max-width: 280px;
-}
-
-.web-surface {
   position: relative;
-  display: flex;
-  gap: 8px;
-  padding: 12px 14px;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  transition: border-color 180ms ease;
+  overflow: hidden;
 }
 
-.web-surface:hover {
-  border-color: rgba(255, 255, 255, 0.14);
+.project-screenshot {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top left;
 }
 
-.web-surface::before {
-  content: attr(data-label);
+.project-visual-overlay {
   position: absolute;
-  top: -8px;
-  left: 12px;
-  padding: 0 6px;
-  font-size: 0.58rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  color: var(--muted-soft);
-  background: rgb(15, 17, 21);
-  border-radius: 3px;
+  top: 12px;
+  right: 12px;
 }
 
-.web-surface-alt::before {
-  background: rgb(13, 14, 18);
-}
-
-.web-surface-row {
-  display: flex;
+.project-visual-badge {
+  display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 6px 10px;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.03);
-  flex: 1;
-}
-
-.web-surface-row svg {
-  width: 14px;
-  height: 14px;
-  flex-shrink: 0;
-  color: var(--muted);
-  opacity: 0.7;
-}
-
-.web-surface-row span {
-  font-size: 0.7rem;
-  font-weight: 500;
-  color: var(--muted);
+  padding: 4px 10px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #fff;
+  background: rgba(34, 197, 94, 0.85);
+  border-radius: 6px;
+  backdrop-filter: blur(8px);
 }
 
 .project-body {
@@ -972,6 +928,132 @@ svg {
 .writing-link {
   margin-top: 16px;
   width: fit-content;
+}
+
+/* ── Catalog extras ── */
+.catalog-preview-screenshot {
+  position: relative;
+  overflow: hidden;
+}
+
+.catalog-preview-screenshot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top left;
+  border-radius: 0;
+}
+
+.catalog-card-featured {
+  grid-column: 1 / -1;
+}
+
+.catalog-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.catalog-tags span {
+  display: inline-flex;
+  padding: 3px 10px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.catalog-preview-neuropad {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(ellipse at 50% 40%, rgba(167, 139, 250, 0.1) 0%, transparent 60%),
+    linear-gradient(160deg, rgba(18, 20, 26, 1) 0%, rgba(12, 13, 16, 1) 100%);
+  border-bottom: 1px solid var(--border);
+}
+
+.neuropad-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 24px;
+}
+
+.neuropad-label {
+  font-family: "Domine", serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-soft);
+  letter-spacing: -0.02em;
+}
+
+.neuropad-status {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(167, 139, 250, 0.6);
+}
+
+/* ── Infra grid ── */
+.infra-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.infra-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--card);
+  text-decoration: none;
+  transition: border-color 180ms ease, transform 180ms ease;
+}
+
+.infra-item:hover {
+  border-color: var(--border-strong);
+  transform: translateY(-1px);
+}
+
+.infra-item img {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+}
+
+.infra-icon-placeholder {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+}
+
+.infra-item strong {
+  display: block;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--text-soft);
+}
+
+.infra-item span {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--muted-soft);
 }
 
 .contact-card {
